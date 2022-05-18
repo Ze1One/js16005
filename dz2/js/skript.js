@@ -63,22 +63,22 @@
 // : "Сезон еще идет" ;
 // alert(result)
 
-// let checking = prompt("Введите год и узнаете чемпиона в период с 2011 по 2022 год");
+// let checking = +prompt("Введите год и узнаете чемпиона в период с 2011 по 2022 год");
 
 // switch (true) {
-//     case (checking == 2012 || checking == 2014 || checking == 2018 || checking == 2019 || checking == 2021) :
+//     case (checking === 2012 || checking == 2014 || checking == 2018 || checking == 2019 || checking == 2021) :
 //         alert('Манчестер Сити');
 //         break;
-//     case (checking == 2011 || checking == 2013):
+//     case (checking === 2011 || checking == 2013):
 //         alert('Манчестер Юнайтед');
 //         break;
-//     case (checking == 2015 || checking == 2017):
+//     case (checking === 2015 || checking == 2017):
 //         alert('Челси');
 //         break;
-//     case (checking == 2020):
+//     case (checking === 2020):
 //         alert('Ливерпуль');
 //         break;
-//     case (checking == 2016):
+//     case (checking === 2016):
 //         alert('Лестер Сити');
 //         break;
 //     case (checking < 2011):
@@ -87,7 +87,7 @@
 //     case (checking > 2022):
 //         alert('Все лучшее впереди');
 //         break;
-//     case (checking == 2022):
+//     case (checking === 2022):
 //         alert('Сезон еще идет');
 //         break;
 //     default:
@@ -130,8 +130,11 @@
 // for (let i = 7; i < 15; i++) {
 //     if (i % 2 == 1) continue;
 //     console.log(i);
+//     if(i == 12) break;
+//     console.log(i);
 
 // } 
+
 
 // for (let j = 0; j < 5; j++) { 
 //     console.log( `number ${j}!` ); 
@@ -145,6 +148,10 @@
 // }
 
 function pow(a, b) {
-   return a ** b;
+   let result = a;
+   for (let a = 1; a < n; i++){
+      result *=a;
+  }
+  return result;
+  
 }
-let result = pow(1 , 2)
