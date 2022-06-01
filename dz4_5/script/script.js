@@ -114,18 +114,42 @@ console.log("hello ");
 // console.log(Animal);
 
 
-function back() {
-    let a = +prompt("Введите число");
-    let b = +prompt("Введите число");
-    let c = a * b;
-    function even(c) {
-        if (c % 2 === 0);
-        console.log('Четное', +even);
-    };
-    function notEven(c) {
-        if (c % 1 === 0)
-        console.log('Не четнон', +notEven);
-    }
+// function back() {
+//     let a = +prompt("Введите число");
+//     let b = +prompt("Введите число");
+//     let c = a * b;
+//     function even(c) {
+//         if (c % 2 === 0);
+//         console.log('Четное', +even);
+//     };
+//     function notEven(c) {
+//         if (c % 1 === 0)
+//         console.log('Не четнон', +notEven);
+//     }
 
-};          
-back();                
+// };          
+// back();      
+
+let firstNumber = +prompt("Введите число");
+let secondNumber = +prompt("Введите число");
+
+showIsEvenMessage(firstNumber, secondNumber, showEvenNumber, showOddNumber);
+
+
+function showIsEvenMessage(numOne, numTwo, showIsEven, showIsOdd) {
+    let numSum = numOne + numTwo;
+    if (numSum % 2 === 0) {
+        showIsEven();
+    } else {
+        showIsOdd();
+    }
+};
+
+function showEvenNumber() {
+    console.log("is even");
+};
+
+function showOddNumber() {
+    console.log("is  not even");
+};
+
