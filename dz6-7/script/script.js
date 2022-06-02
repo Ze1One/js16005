@@ -164,21 +164,26 @@
 // 4.
 // Получите и выведите в консоль сумму и произведение
 // всех числовых значений данного массива (через forEach, map)
-let arr = [6, 3, "ten", 1, true, "4"]
-let mult = 1;
-let sum = 0;
-function multi(arr) {
-    arr.forEach(item => {
-        if (typeof item === "number") {
-            // mult *= item
-            sum += item
-        }
-        return sum;
-    });
-};
-let result = multi(arr);
-console.log(result);
-console.log(sum);
+// let arr = [6, 3, "ten", 1, true, "4"]
+// let mult = 1;
+// let sum = 0;
+// function multi(arr) {
+    
+//     arr.forEach(item => {
+//         if (typeof item === "number") {
+//             mult *= item
+//             sum += item
+//             return mult;
+//         }
+//         return sum;
+        
+//     });
+// };
+// let result = multi(arr);
+// console.log(mult);
+// console.log(sum);
+
+
 
 // function arrSum() {
 //     let sum = 0;

@@ -30,10 +30,11 @@ let students = [{ name: 'Alexey', id: 123, marks: 9 },
 // console.log(result);
 
 // function average(arr) {
-//     return arr.filter(item => {
-//         return item.id > 120}).reduce((acc, item) => acc + item.marks, 0) / arr.length; 
-//         // if (item.id > 120) return arr.reduce((acc, item) => acc + item.marks, 0) / arr.length; - undefined
+//     let result = arr.filter(item => {
+//         return item.id > 120}) 
+//        return result.reduce((acc, item) => acc + item.marks, 0) / result.length;
 // };
+
 
 // console.log(average(students));
 
