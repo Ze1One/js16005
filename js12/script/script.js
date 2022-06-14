@@ -28,9 +28,9 @@
 
 // const mySkills =['html', 'css'];
 
-// // mySkills.push.apply(mySkills, ['JS', 'React'])
+// mySkills.push.apply(mySkills, ['JS', 'React'])
 
-// // mySkills.push(...['JS', 'React'])
+// mySkills.push(...['JS', 'React'])
 
 // let newSkills = ['JS', 'Rreact'];
 // mySkills.push(...newSkills)
@@ -94,11 +94,117 @@
 // console.log(addTen(5));
 
 
-function createProfilInfo(groupNumber){
-    return function(fullName){
-        return `Работу сделал ${fullName} из группы ${groupNumber}`;
-    };
-};
+// function createProfilInfo(groupNumber){
+//     return function(fullName){
+//         return `Работу сделал ${fullName} из группы ${groupNumber}`;
+//     };
+// };
 
-const groupSevenStudent = createProfilInfo(7);
-console.log(groupSevenStudent('Фёдор Сиянко'));
+// const groupSevenStudent = createProfilInfo(7);
+// console.log(groupSevenStudent('Фёдор Сиянко'));
+
+
+//                              Функция конструктор
+
+// let sum = new Function('a', 'b', 'return a+b');
+// console.log(sum(5, 10));
+// let fullName = new Function('name', 'surname', 'return `${name} ${surname}`');
+// console.log(fullName('Ivan', 'Ivanov'));
+
+
+//                              Set timeout
+
+// function show() {
+//     console.log('Hello World');
+// };
+// setTimeout(show, 5000);
+
+//                              2 Variant
+
+// setTimeout(() => {
+//     console.log('Hello World');
+// }, 5000);
+
+
+// function showMessage(phrase) {
+//     console.log(phrase);
+// };
+// // setTimeout(showMessage, 4000, ' Hello World!');
+
+// let timerId = setTimeout(showMessage, 4000, ' Hello World!');
+// console.log(timerId);
+// clearTimeout(timerId)
+
+// function showMessage(phrase) {
+//     console.log(phrase);
+// };
+
+// setInterval(showMessage, 3000, ' Hello World!');
+
+// let timerId = setInterval(()=>{console.log('Hello World!');}, 3000);
+// console.log(timerId);
+
+//                                   остановка  
+
+// setTimeout(()=>{
+//     clearInterval(timerId);
+//     console.log('Stop');
+// }, 10000)
+
+
+// let timerId = setTimeout(function tick(){
+//     console.log('Tick');
+//     timerId = setTimeout(tick, 2000)
+// },2000);
+
+
+
+// console.log(1);
+
+// function showMessage(phrase) {
+//     console.log(phrase);
+// };
+
+// setTimeout(()=>{
+//     console.log(2);
+// }, 0);
+
+// console.log(3);
+
+
+
+// function firstMessage(){
+//     console.log(1);
+//     console.log(2);
+// };
+
+// function secondtMessage(){
+//     console.log(3);
+//     firstMessage();
+// };
+// secondtMessage()
+
+// console.log(1);
+// console.log(2);
+// function timer(){
+//     console.log(3);
+// }
+// setTimeout(()=>{
+//     console.log(4);
+// },5000);
+// setTimeout(timer, 2000)
+// console.log(5);
+
+
+//                              this = window
+
+function showMessage() {
+    console.log('hello', this);
+};
+const students = {
+    name: 'Ivan',
+    age: 30,
+    sayHiFromWinow: showMessage.bind(),
+}
+showMessage();
+students.sayHiFromWinow()
