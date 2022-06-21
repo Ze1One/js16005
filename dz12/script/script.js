@@ -35,7 +35,7 @@ console.log('hello');
 // 3) 
 
 // let cars = ["Jeep", "Jeep", "Kia", "BMW", "BMW", "BMW", "Renault"]
-// let uniq = new Set(cars);
+// let uniq = [...new Set(cars)];
 // console.log(uniq);
 //  получить новый массив с уникальными значениями используя spread
 
@@ -84,50 +84,52 @@ console.log('hello');
 
 //                                   остановка  
 
-// function stop(n) {
+// function stop() {
 //   let rep = setInterval(function repit() {
 //     console.log('hello');
-//     clearInterval(rep, 10000);
 //   }, 1000);
-  
 
+//   setTimeout(() => {
+//     clearInterval(rep);
+//   }, 5000)
 // };
-// console.log(stop('n'));
+// stop()
+// console.log(stop());
 
 
 
-// 7) 
-function firstCall() {  console.log(1);
-  secondCall();
-  setTimeout(function() {
-    console.log(3)
-  }, 3000);
-  console.log(4);
-}
+// 7)
+// function firstCall() {  console.log(1);
+//   secondCall();
+//   setTimeout(function() {
+//     console.log(3)
+//   }, 3000);
+//   console.log(4);
+// }
 
-function secondCall() {
-  setTimeout(function() {
-    console.log(5)
-  }, 0);
-  console.log(6);
-}
+// function secondCall() {
+//   setTimeout(function() {
+//     console.log(5)
+//   }, 0);
+//   console.log(6);
+// }
 
-firstCall();
+// firstCall();
 
 // Подумать самостоятельно в каком порядке будут выведены числа в консоль
 // После чего себя проверить latentflip.com
 
-// 8) 
+// 8)
 
-let jordan = {
-name: "Michael",
-age: 59,
-}
+// let jordan = {
+// name: "Michael",
+// age: 59,
+// }
 
-let messi = {
-name: "Lionel",
-age: 34,
-}
+// let messi = {
+// name: "Lionel",
+// age: 34,
+// }
 
 // Создать в одном из объектов метод, который будет выводить в консоль его имя, используя this
 // А также добавить метод, позволяющий изменять контекст вызова. При вызове в одном объекте,
